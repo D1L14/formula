@@ -6,7 +6,8 @@ body {
 }
 
 .btn-img {
-  width: 1200px; 
+  width: 80vw; 
+  max-width: 300px;
   height: auto;
   user-select: none;
   pointer-events: none;
@@ -34,16 +35,16 @@ button {
 
 #mainMenu h1 {
   margin-bottom: 30px;
-  font-size: 2em;
-  font-family: var();
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
 }
 
 #mainMenu button {
   margin: 10px;
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: clamp(14px, 4vw, 18px);
   cursor: pointer;
 }
+
 
 #overlayText {
   position: absolute;
@@ -199,7 +200,7 @@ button {
   }
 
   #mainMenu h1 {
-    font-size: 3.5em;
+    font-size: 1.5em;
   }
 
   #mainMenu button {
