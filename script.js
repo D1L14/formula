@@ -51,17 +51,32 @@ const obstacleImages = ["wheel.png", "wrench.png", "bolt.png"];
 
 document.addEventListener("keydown", handleKeydown);
 
-let touchStartX = 0;
-let touchEndX = 0;
+let startX = 0;
 
 gameArea.addEventListener("touchstart", (e) => {
-  touchStartX = e.changedTouches[0].screenX;
-});
+  startX = e.touches[0].clientX;
+}, false);
 
-gameArea.addEventListener("touchend", (e) => {
-  touchEndX = e.changedTouches[0].screenX;
-  handleSwipe();
-});
+gameArea.addEventListener("touchmove", (e) => {
+    const touchX = e.touches[0].clientX;
+  const deltaX = touchX - startX;
+
+  const gameAreaRect = gameArea.getBoundingClientRect();
+  const carRect = car.getBoundingClientRect();
+
+  let newLeft = car.offsetLeft + deltaX * 1.2;
+
+  // Limiti di movimento (bordo sinistro e destro)
+  const minLeft = 0;
+  const maxLeft = gameArea.clientWidth - car.clientWidth;
+
+  // Clamp tra min e max
+  newLeft = Math.max(minLeft, Math.min(maxLeft, newLeft));
+
+  car.style.left = `${newLeft}px`;
+
+  startX = touchX; // aggiorno per il prossimo movimento
+}, false);
 
 function handleSwipe() {
   if (!gameRunning) return;
@@ -386,17 +401,6 @@ function startNextLevel() {
   obstacleSpeed = levelSettings[currentLevel].speed;
 
   showStartLights();
-}
-
-function handleKeydown(e) {
-  if (!gameRunning) return;
-
-  if (e.key === "ArrowLeft" && carPosition > 0) {
-    carPosition -= 20;
-  } else if (e.key === "ArrowRight" && carPosition < 360) {
-    carPosition += 20;
-  }
-  car.style.left = carPosition + "px";
 }
 
 let isPaused = false;

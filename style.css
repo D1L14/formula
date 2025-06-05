@@ -98,6 +98,7 @@ button {
   background-size: contain;
   background-repeat: no-repeat;
   z-index: 5;
+  transition: left 0.2s ease; /* transizione fluida */
 }
 
 /* Ostacoli */
