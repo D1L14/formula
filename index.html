@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini F1 - Evita gli ostacoli!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="mainMenu">
+    <h1><img src="img/formula.png" alt="Formula" class="header-img"></h1>
+    <button id="btnStart"><img src="img/start.png" alt="Start" class="btn-img"></button>
+    <button id="btnControls"><img src="img/comandi.png" alt="Comandi" class="btn-img"></button>
+    <button id="btnCredits"><img src="img/crediti.png" alt="Crediti" class="btn-img"></button>
+  </div>
+
+  <div id="overlayText" class="hidden"></div>
+
+  <audio id="startSound" src="audio/starting.mp3" preload="auto"></audio>
+
+  <div id="gameArea">
+
+    <div class="track-wall left"></div>
+    <div class="track-wall right"></div>
+
+    <div id="startLights"></div>
+    <div id="car"></div>
+
+  </div>
+
+  <div id="flagWin" class="hidden">
+    <img src="img/flag.png" alt="Bandiera a scacchi">
+  </div>
+
+  <audio id="gameOverSound" src="audio/gameover.mp3"></audio>
+  <audio id="winSound" src="audio/win.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
