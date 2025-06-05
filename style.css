@@ -1,5 +1,7 @@
-body {
+html, body {
   margin: 0;
+  padding: 0;
+  height: 100%;
   overflow: hidden;
   background-color: #0b0b0b;
   font-family: sans-serif;
@@ -62,19 +64,19 @@ button {
   display: none;
 }
 .game-wrapper {
+  height: 100dvh;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100dvh;
   overflow: hidden;
 }
-
 #gameArea {
   position: relative;
   width: 100vw;
   max-width: 400px;
-  height: 80dvh;
-  max-height: 80dvh;
+  height: 100dvh;
+  max-height: 100dvh;
   margin: 0 auto;
   background-image: url('img/gamearea.png');
   background-repeat: no-repeat;
@@ -89,8 +91,9 @@ button {
   width: 40px;
   height: 80px;
   position: absolute;
-  top: 460px;
-  left: 180px;
+  bottom: 40px; /* invece di usare top fisso */
+  left: 50%;
+  transform: translateX(-50%);
   background-image: url('img/ferrarif1.png');
   background-size: contain;
   background-repeat: no-repeat;
