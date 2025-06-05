@@ -213,15 +213,15 @@ button {
 }
 @media (max-width: 375px) {
   #gameArea {
-    height: 100dvh;  /* pieno schermo */
+    height: 100dvh;             /* usa tutto lo schermo */
     max-height: 100dvh;
-    padding-top: 100px; /* sposta verso il basso il contenuto interno */
-    box-sizing: border-box; /* perché il padding non faccia overflow */
-    overflow: hidden;
+    overflow: hidden;           /* nascondi l'eccesso */
+    position: relative;
+    transform: translateY(-50px); /* sposta tutto l’area visiva un po’ verso l’alto */
   }
 
   #car {
-    top: calc(460px + 100px); /* sposta la Ferrari più giù in modo coerente con il padding */
+    top: 460px;  /* posizione originale, non serve alzarla */
   }
 }
 
