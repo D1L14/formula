@@ -61,6 +61,13 @@ button {
 .hidden {
   display: none;
 }
+.game-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  overflow: hidden;
+}
 
 #gameArea {
   position: relative;
@@ -211,17 +218,5 @@ button {
     width: 70px;
   }
 }
-@media (max-width: 375px) {
-  #gameArea {
-    height: 100dvh;             /* usa tutto lo schermo */
-    max-height: 100dvh;
-    overflow: hidden;           /* nascondi l'eccesso */
-    position: relative;
-    transform: translateY(-70px); /* sposta tutto l’area visiva un po’ verso l’alto */
-  }
 
-  #car {
-    top: 460px;  /* posizione originale, non serve alzarla */
-  }
-}
 
