@@ -64,9 +64,9 @@ button {
 
 #gameArea {
   position: relative;
-  width: 90vw;
+  width: 80vw;
   max-width: 400px;
-  height: 135vw;
+  height: 125vw;
   max-height: 600px;
   margin: 0 auto;
   background-image: url('img/gamearea.png');
@@ -199,7 +199,7 @@ button {
   }
 
   #mainMenu h1 {
-    font-size: 1.5em;
+    font-size: 3.5em;
   }
 
   #mainMenu button {
