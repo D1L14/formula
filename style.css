@@ -62,13 +62,12 @@ button {
   display: none;
 }
 
-
 #gameArea {
   position: relative;
-  width: 80vw;
+  width: 100vw;
   max-width: 400px;
-  height: 125vw;
-  max-height: 600px;
+  height: 80dvh;
+  max-height: 80dvh;
   margin: 0 auto;
   background-image: url('img/gamearea.png');
   background-repeat: no-repeat;
