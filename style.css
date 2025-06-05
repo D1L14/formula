@@ -217,7 +217,7 @@ button {
     max-height: 100dvh;
     overflow: hidden;           /* nascondi l'eccesso */
     position: relative;
-    transform: translateY(-50px); /* sposta tutto l’area visiva un po’ verso l’alto */
+    transform: translateY(-70px); /* sposta tutto l’area visiva un po’ verso l’alto */
   }
 
   #car {
