@@ -64,8 +64,10 @@ button {
 
 #gameArea {
   position: relative;
-  width: 400px;
-  height: 600px;
+  width: 90vw;
+  max-width: 400px;
+  height: 135vw;
+  max-height: 600px;
   margin: 0 auto;
   background-image: url('img/gamearea.png');
   background-repeat: no-repeat;
@@ -191,3 +193,21 @@ button {
   opacity: 1;
 }
 
+@media (max-width: 768px) {
+  .btn-img {
+    width: 80vw;
+  }
+
+  #mainMenu h1 {
+    font-size: 1.5em;
+  }
+
+  #mainMenu button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  #flagWin img {
+    width: 70px;
+  }
+}
