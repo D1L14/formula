@@ -211,3 +211,9 @@ button {
     width: 70px;
   }
 }
+@media (max-width: 375px) {
+  #gameArea {
+    height: 95dvh;    /* quasi tutta l’altezza della viewport */
+    max-height: 95dvh;
+  }
+}
