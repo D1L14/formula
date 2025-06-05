@@ -9,16 +9,10 @@ html, body {
 
 .btn-img {
   width: 80vw; 
-  max-width: 300px;
+  max-width: 700px;
   height: auto;
   user-select: none;
   pointer-events: none;
-}
-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
 }
 
 #mainMenu {
@@ -32,21 +26,18 @@ button {
   align-items: center;
   justify-content: center;
   z-index: 20;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-#mainMenu h1 {
-  margin-bottom: 30px;
-  font-size: clamp(1.5rem, 5vw, 2.5rem);
+#mainMenu h1 img {
+  width: 800px;
+  height: auto;
 }
 
-#mainMenu button {
-  margin: 10px;
-  padding: 10px 20px;
-  font-size: clamp(14px, 4vw, 18px);
+#mainMenu .btn-img {
+  width: 800px;
+  height: auto;
   cursor: pointer;
 }
-
 
 #overlayText {
   position: absolute;
