@@ -64,7 +64,7 @@ gameArea.addEventListener("touchmove", (e) => {
   const gameAreaRect = gameArea.getBoundingClientRect();
   const carRect = car.getBoundingClientRect();
 
-  let newLeft = car.offsetLeft + deltaX * 1.2;
+  let newLeft = car.offsetLeft + deltaX * 5;
 
   // Limiti di movimento (bordo sinistro e destro)
   const minLeft = 0;
