@@ -213,7 +213,13 @@ button {
 }
 @media (max-width: 375px) {
   #gameArea {
-    height: 95dvh;    /* quasi tutta l’altezza della viewport */
-    max-height: 95dvh;
+    height: 85dvh;    /* diminuisco l'altezza per far entrare meno area sopra */
+    max-height: 85dvh;
+    overflow: visible; /* nel caso serva vedere elementi che escono */
+    position: relative;
+  }
+
+  #car {
+    top: 420px;       /* sposto la Ferrari un po' più in alto rispetto al container */
   }
 }
